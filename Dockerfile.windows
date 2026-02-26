@@ -1,0 +1,8 @@
+FROM archlinux:latest
+
+RUN pacman -Syu --noconfirm base-devel cmake ninja git double-conversion
+
+ENV MXE_PATH=/mxe
+ENV PATH=${MXE_PATH}/usr/bin:${PATH}
+
+WORKDIR /app

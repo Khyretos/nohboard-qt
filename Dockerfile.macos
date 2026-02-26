@@ -1,0 +1,25 @@
+FROM stateoftheartio/qt6:6.5-macos-aqt
+
+USER root
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    && apt-get clean
+USER user
+
+WORKDIR /app
+COPY . /app
+
+# Build the application – let CMake create the app bundle (no override)
+RUN mkdir build && cd build && \
+    qt-cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release && \
+    cmake --build . --parallel && \
+    ls -la .
+
+# Now we have build/NohBoard.app – copy keyboards into the bundle's Resources
+RUN cd build && \
+    mkdir -p NohBoard.app/Contents/Resources/keyboards && \
+    cp -r ../keyboards/* NohBoard.app/Contents/Resources/keyboards/ && \
+    # Run macdeployqt to bundle Qt frameworks and ensure Info.plist is correct
+    macdeployqt NohBoard.app -verbose=1
+
+# Extract the final .app
+CMD cp -r /app/build/NohBoard.app /dist/

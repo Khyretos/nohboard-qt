@@ -1,0 +1,31 @@
+🔧 Normal Development Build (on your host)
+Nothing changes. You can continue developing and testing on your local machine just as before:
+
+bash
+cd build
+cmake .. -DCMAKE_BUILD_TYPE=Debug -G Ninja
+ninja
+./NohBoard
+This will use your system’s libraries and is perfect for quick iterations.
+
+📦 Building a New AppImage (after code changes)
+Whenever you modify the code and want to create an updated AppImage, simply run the same script:
+
+bash
+sudo ./build-appimage.sh
+This will:
+
+Re‑run the Docker build, copying your latest source code into the container.
+
+Compile the application inside the Ubuntu 20.04 environment.
+
+Bundle all dependencies (Qt, X11, Wayland, etc.) into a new AppImage.
+
+Place the final NohBoard-*.AppImage into the dist/ folder.
+
+The process is completely automated and reproducible—you don’t need to clean anything manually.
+
+
+
+x86_64-w64-mingw32.static-cmake .. -DCMAKE_BUILD_TYPE=Release
+make -j4

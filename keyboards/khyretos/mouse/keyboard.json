@@ -1,0 +1,214 @@
+{
+  "Elements": [
+    {
+      "__type": "MouseKey",
+      "Id": 1,
+      "Boundaries": [
+        {
+          "X": 0,
+          "Y": 50
+        },
+        {
+          "X": 100,
+          "Y": 0
+        },
+        {
+          "X": 100,
+          "Y": 200
+        },
+        {
+          "X": 0,
+          "Y": 200
+        }
+      ],
+      "KeyCodes": [1],
+      "Text": "R",
+      "TextPosition": {
+        "X": 50,
+        "Y": 100
+      },
+      "ChangeOnCaps": false,
+      "ShiftText": "L"
+    },
+    {
+      "__type": "MouseKey",
+      "Id": 2,
+      "Boundaries": [
+        {
+          "X": 100,
+          "Y": 0
+        },
+        {
+          "X": 200,
+          "Y": 50
+        },
+        {
+          "X": 200,
+          "Y": 200
+        },
+        {
+          "X": 100,
+          "Y": 200
+        }
+      ],
+      "KeyCodes": [0],
+      "Text": "L",
+      "TextPosition": {
+        "X": 150,
+        "Y": 100
+      }
+    },
+    {
+      "__type": "MouseSpeedIndicator",
+      "Id": 3,
+      "Location": {
+        "X": 100,
+        "Y": 300
+      },
+      "Radius": 95
+    },
+    {
+      "__type": "MouseKey",
+      "Id": 4,
+      "Boundaries": [
+        {
+          "X": 185,
+          "Y": 225
+        },
+        {
+          "X": 210,
+          "Y": 225
+        },
+        {
+          "X": 210,
+          "Y": 300
+        },
+        {
+          "X": 185,
+          "Y": 300
+        }
+      ],
+      "KeyCodes": [3],
+      "Text": "5",
+      "TextPosition": {
+        "X": 251,
+        "Y": 350
+      }
+    },
+    {
+      "__type": "MouseKey",
+      "Id": 5,
+      "Boundaries": [
+        {
+          "X": 185,
+          "Y": 150
+        },
+        {
+          "X": 210,
+          "Y": 150
+        },
+        {
+          "X": 210,
+          "Y": 225
+        },
+        {
+          "X": 185,
+          "Y": 225
+        }
+      ],
+      "KeyCodes": [4],
+      "Text": "4",
+      "TextPosition": {
+        "X": 251,
+        "Y": 250
+      }
+    },
+    {
+      "__type": "MouseScroll",
+      "Id": 7,
+      "Boundaries": [
+        {
+          "X": 75,
+          "Y": 125
+        },
+        {
+          "X": 125,
+          "Y": 125
+        },
+        {
+          "X": 125,
+          "Y": 150
+        },
+        {
+          "X": 75,
+          "Y": 150
+        }
+      ],
+      "KeyCodes": [1],
+      "Text": "↓",
+      "TextPosition": {
+        "X": 150,
+        "Y": 175
+      }
+    },
+    {
+      "__type": "MouseScroll",
+      "Id": 8,
+      "Boundaries": [
+        {
+          "X": 75,
+          "Y": 50
+        },
+        {
+          "X": 125,
+          "Y": 50
+        },
+        {
+          "X": 125,
+          "Y": 75
+        },
+        {
+          "X": 75,
+          "Y": 75
+        }
+      ],
+      "KeyCodes": [0],
+      "Text": "↑",
+      "TextPosition": {
+        "X": 150,
+        "Y": 25
+      }
+    },
+    {
+      "__type": "MouseKey",
+      "Id": 6,
+      "Boundaries": [
+        {
+          "X": 75,
+          "Y": 75
+        },
+        {
+          "X": 125,
+          "Y": 75
+        },
+        {
+          "X": 125,
+          "Y": 125
+        },
+        {
+          "X": 75,
+          "Y": 125
+        }
+      ],
+      "KeyCodes": [2],
+      "Text": "M",
+      "TextPosition": {
+        "X": 150,
+        "Y": 100
+      }
+    }
+  ],
+  "Height": 400,
+  "Version": 2,
+  "Width": 210
+}

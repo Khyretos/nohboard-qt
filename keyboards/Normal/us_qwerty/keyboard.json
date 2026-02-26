@@ -1,0 +1,547 @@
+{
+  "Version": 2,
+  "Width": 860,
+  "Height": 300,
+  "Elements": [
+    {
+      "Id": 1,
+      "Boundaries": [{"X": 5, "Y": 5}, {"X": 55, "Y": 5}, {"X": 55, "Y": 55}, {"X": 5, "Y": 55}],
+      "TextPosition": {"X": 30, "Y": 30},
+      "KeyCodes": [192],
+      "Text": "`",
+      "ShiftText": "~",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 2,
+      "Boundaries": [{"X": 60, "Y": 5}, {"X": 110, "Y": 5}, {"X": 110, "Y": 55}, {"X": 60, "Y": 55}],
+      "TextPosition": {"X": 85, "Y": 30},
+      "KeyCodes": [49],
+      "Text": "1",
+      "ShiftText": "!",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 3,
+      "Boundaries": [{"X": 115, "Y": 5}, {"X": 165, "Y": 5}, {"X": 165, "Y": 55}, {"X": 115, "Y": 55}],
+      "TextPosition": {"X": 140, "Y": 30},
+      "KeyCodes": [50],
+      "Text": "2",
+      "ShiftText": "@",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 4,
+      "Boundaries": [{"X": 170, "Y": 5}, {"X": 220, "Y": 5}, {"X": 220, "Y": 55}, {"X": 170, "Y": 55}],
+      "TextPosition": {"X": 195, "Y": 30},
+      "KeyCodes": [51],
+      "Text": "3",
+      "ShiftText": "#",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 5,
+      "Boundaries": [{"X": 225, "Y": 5}, {"X": 275, "Y": 5}, {"X": 275, "Y": 55}, {"X": 225, "Y": 55}],
+      "TextPosition": {"X": 250, "Y": 30},
+      "KeyCodes": [52],
+      "Text": "4",
+      "ShiftText": "$",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 6,
+      "Boundaries": [{"X": 280, "Y": 5}, {"X": 330, "Y": 5}, {"X": 330, "Y": 55}, {"X": 280, "Y": 55}],
+      "TextPosition": {"X": 305, "Y": 30},
+      "KeyCodes": [53],
+      "Text": "5",
+      "ShiftText": "%",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 7,
+      "Boundaries": [{"X": 335, "Y": 5}, {"X": 385, "Y": 5}, {"X": 385, "Y": 55}, {"X": 335, "Y": 55}],
+      "TextPosition": {"X": 360, "Y": 30},
+      "KeyCodes": [54],
+      "Text": "6",
+      "ShiftText": "^",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 8,
+      "Boundaries": [{"X": 390, "Y": 5}, {"X": 440, "Y": 5}, {"X": 440, "Y": 55}, {"X": 390, "Y": 55}],
+      "TextPosition": {"X": 415, "Y": 30},
+      "KeyCodes": [55],
+      "Text": "7",
+      "ShiftText": "&",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 9,
+      "Boundaries": [{"X": 445, "Y": 5}, {"X": 495, "Y": 5}, {"X": 495, "Y": 55}, {"X": 445, "Y": 55}],
+      "TextPosition": {"X": 470, "Y": 30},
+      "KeyCodes": [56],
+      "Text": "8",
+      "ShiftText": "*",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 10,
+      "Boundaries": [{"X": 500, "Y": 5}, {"X": 550, "Y": 5}, {"X": 550, "Y": 55}, {"X": 500, "Y": 55}],
+      "TextPosition": {"X": 525, "Y": 30},
+      "KeyCodes": [57],
+      "Text": "9",
+      "ShiftText": "(",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 11,
+      "Boundaries": [{"X": 555, "Y": 5}, {"X": 605, "Y": 5}, {"X": 605, "Y": 55}, {"X": 555, "Y": 55}],
+      "TextPosition": {"X": 580, "Y": 30},
+      "KeyCodes": [48],
+      "Text": "0",
+      "ShiftText": ")",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 12,
+      "Boundaries": [{"X": 610, "Y": 5}, {"X": 660, "Y": 5}, {"X": 660, "Y": 55}, {"X": 610, "Y": 55}],
+      "TextPosition": {"X": 635, "Y": 30},
+      "KeyCodes": [189],
+      "Text": "-",
+      "ShiftText": "_",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 13,
+      "Boundaries": [{"X": 665, "Y": 5}, {"X": 715, "Y": 5}, {"X": 715, "Y": 55}, {"X": 665, "Y": 55}],
+      "TextPosition": {"X": 690, "Y": 30},
+      "KeyCodes": [187],
+      "Text": "=",
+      "ShiftText": "+",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 14,
+      "Boundaries": [{"X": 720, "Y": 5}, {"X": 855, "Y": 5}, {"X": 855, "Y": 55}, {"X": 720, "Y": 55}],
+      "TextPosition": {"X": 787, "Y": 30},
+      "KeyCodes": [8],
+      "Text": "Bksp",
+      "ShiftText": "Bksp",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 20,
+      "Boundaries": [{"X": 5, "Y": 60}, {"X": 85, "Y": 60}, {"X": 85, "Y": 110}, {"X": 5, "Y": 110}],
+      "TextPosition": {"X": 45, "Y": 85},
+      "KeyCodes": [9],
+      "Text": "Tab",
+      "ShiftText": "Tab",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 21,
+      "Boundaries": [{"X": 90, "Y": 60}, {"X": 140, "Y": 60}, {"X": 140, "Y": 110}, {"X": 90, "Y": 110}],
+      "TextPosition": {"X": 115, "Y": 85},
+      "KeyCodes": [81],
+      "Text": "Q",
+      "ShiftText": "Q",
+      "ChangeOnCaps": true
+    },
+    {
+      "Id": 22,
+      "Boundaries": [{"X": 145, "Y": 60}, {"X": 195, "Y": 60}, {"X": 195, "Y": 110}, {"X": 145, "Y": 110}],
+      "TextPosition": {"X": 170, "Y": 85},
+      "KeyCodes": [87],
+      "Text": "W",
+      "ShiftText": "W",
+      "ChangeOnCaps": true
+    },
+    {
+      "Id": 23,
+      "Boundaries": [{"X": 200, "Y": 60}, {"X": 250, "Y": 60}, {"X": 250, "Y": 110}, {"X": 200, "Y": 110}],
+      "TextPosition": {"X": 225, "Y": 85},
+      "KeyCodes": [69],
+      "Text": "E",
+      "ShiftText": "E",
+      "ChangeOnCaps": true
+    },
+    {
+      "Id": 24,
+      "Boundaries": [{"X": 255, "Y": 60}, {"X": 305, "Y": 60}, {"X": 305, "Y": 110}, {"X": 255, "Y": 110}],
+      "TextPosition": {"X": 280, "Y": 85},
+      "KeyCodes": [82],
+      "Text": "R",
+      "ShiftText": "R",
+      "ChangeOnCaps": true
+    },
+    {
+      "Id": 25,
+      "Boundaries": [{"X": 310, "Y": 60}, {"X": 360, "Y": 60}, {"X": 360, "Y": 110}, {"X": 310, "Y": 110}],
+      "TextPosition": {"X": 335, "Y": 85},
+      "KeyCodes": [84],
+      "Text": "T",
+      "ShiftText": "T",
+      "ChangeOnCaps": true
+    },
+    {
+      "Id": 26,
+      "Boundaries": [{"X": 365, "Y": 60}, {"X": 415, "Y": 60}, {"X": 415, "Y": 110}, {"X": 365, "Y": 110}],
+      "TextPosition": {"X": 390, "Y": 85},
+      "KeyCodes": [89],
+      "Text": "Y",
+      "ShiftText": "Y",
+      "ChangeOnCaps": true
+    },
+    {
+      "Id": 27,
+      "Boundaries": [{"X": 420, "Y": 60}, {"X": 470, "Y": 60}, {"X": 470, "Y": 110}, {"X": 420, "Y": 110}],
+      "TextPosition": {"X": 445, "Y": 85},
+      "KeyCodes": [85],
+      "Text": "U",
+      "ShiftText": "U",
+      "ChangeOnCaps": true
+    },
+    {
+      "Id": 28,
+      "Boundaries": [{"X": 475, "Y": 60}, {"X": 525, "Y": 60}, {"X": 525, "Y": 110}, {"X": 475, "Y": 110}],
+      "TextPosition": {"X": 500, "Y": 85},
+      "KeyCodes": [73],
+      "Text": "I",
+      "ShiftText": "I",
+      "ChangeOnCaps": true
+    },
+    {
+      "Id": 29,
+      "Boundaries": [{"X": 530, "Y": 60}, {"X": 580, "Y": 60}, {"X": 580, "Y": 110}, {"X": 530, "Y": 110}],
+      "TextPosition": {"X": 555, "Y": 85},
+      "KeyCodes": [79],
+      "Text": "O",
+      "ShiftText": "O",
+      "ChangeOnCaps": true
+    },
+    {
+      "Id": 30,
+      "Boundaries": [{"X": 585, "Y": 60}, {"X": 635, "Y": 60}, {"X": 635, "Y": 110}, {"X": 585, "Y": 110}],
+      "TextPosition": {"X": 610, "Y": 85},
+      "KeyCodes": [80],
+      "Text": "P",
+      "ShiftText": "P",
+      "ChangeOnCaps": true
+    },
+    {
+      "Id": 31,
+      "Boundaries": [{"X": 640, "Y": 60}, {"X": 690, "Y": 60}, {"X": 690, "Y": 110}, {"X": 640, "Y": 110}],
+      "TextPosition": {"X": 665, "Y": 85},
+      "KeyCodes": [219],
+      "Text": "[",
+      "ShiftText": "{",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 32,
+      "Boundaries": [{"X": 695, "Y": 60}, {"X": 745, "Y": 60}, {"X": 745, "Y": 110}, {"X": 695, "Y": 110}],
+      "TextPosition": {"X": 720, "Y": 85},
+      "KeyCodes": [221],
+      "Text": "]",
+      "ShiftText": "}",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 33,
+      "Boundaries": [{"X": 750, "Y": 60}, {"X": 855, "Y": 60}, {"X": 855, "Y": 110}, {"X": 750, "Y": 110}],
+      "TextPosition": {"X": 802, "Y": 85},
+      "KeyCodes": [220],
+      "Text": "\\",
+      "ShiftText": "|",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 40,
+      "Boundaries": [{"X": 5, "Y": 115}, {"X": 95, "Y": 115}, {"X": 95, "Y": 165}, {"X": 5, "Y": 165}],
+      "TextPosition": {"X": 50, "Y": 140},
+      "KeyCodes": [20],
+      "Text": "Caps",
+      "ShiftText": "Caps",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 41,
+      "Boundaries": [{"X": 100, "Y": 115}, {"X": 150, "Y": 115}, {"X": 150, "Y": 165}, {"X": 100, "Y": 165}],
+      "TextPosition": {"X": 125, "Y": 140},
+      "KeyCodes": [65],
+      "Text": "A",
+      "ShiftText": "A",
+      "ChangeOnCaps": true
+    },
+    {
+      "Id": 42,
+      "Boundaries": [{"X": 155, "Y": 115}, {"X": 205, "Y": 115}, {"X": 205, "Y": 165}, {"X": 155, "Y": 165}],
+      "TextPosition": {"X": 180, "Y": 140},
+      "KeyCodes": [83],
+      "Text": "S",
+      "ShiftText": "S",
+      "ChangeOnCaps": true
+    },
+    {
+      "Id": 43,
+      "Boundaries": [{"X": 210, "Y": 115}, {"X": 260, "Y": 115}, {"X": 260, "Y": 165}, {"X": 210, "Y": 165}],
+      "TextPosition": {"X": 235, "Y": 140},
+      "KeyCodes": [68],
+      "Text": "D",
+      "ShiftText": "D",
+      "ChangeOnCaps": true
+    },
+    {
+      "Id": 44,
+      "Boundaries": [{"X": 265, "Y": 115}, {"X": 315, "Y": 115}, {"X": 315, "Y": 165}, {"X": 265, "Y": 165}],
+      "TextPosition": {"X": 290, "Y": 140},
+      "KeyCodes": [70],
+      "Text": "F",
+      "ShiftText": "F",
+      "ChangeOnCaps": true
+    },
+    {
+      "Id": 45,
+      "Boundaries": [{"X": 320, "Y": 115}, {"X": 370, "Y": 115}, {"X": 370, "Y": 165}, {"X": 320, "Y": 165}],
+      "TextPosition": {"X": 345, "Y": 140},
+      "KeyCodes": [71],
+      "Text": "G",
+      "ShiftText": "G",
+      "ChangeOnCaps": true
+    },
+    {
+      "Id": 46,
+      "Boundaries": [{"X": 375, "Y": 115}, {"X": 425, "Y": 115}, {"X": 425, "Y": 165}, {"X": 375, "Y": 165}],
+      "TextPosition": {"X": 400, "Y": 140},
+      "KeyCodes": [72],
+      "Text": "H",
+      "ShiftText": "H",
+      "ChangeOnCaps": true
+    },
+    {
+      "Id": 47,
+      "Boundaries": [{"X": 430, "Y": 115}, {"X": 480, "Y": 115}, {"X": 480, "Y": 165}, {"X": 430, "Y": 165}],
+      "TextPosition": {"X": 455, "Y": 140},
+      "KeyCodes": [74],
+      "Text": "J",
+      "ShiftText": "J",
+      "ChangeOnCaps": true
+    },
+    {
+      "Id": 48,
+      "Boundaries": [{"X": 485, "Y": 115}, {"X": 535, "Y": 115}, {"X": 535, "Y": 165}, {"X": 485, "Y": 165}],
+      "TextPosition": {"X": 510, "Y": 140},
+      "KeyCodes": [75],
+      "Text": "K",
+      "ShiftText": "K",
+      "ChangeOnCaps": true
+    },
+    {
+      "Id": 49,
+      "Boundaries": [{"X": 540, "Y": 115}, {"X": 590, "Y": 115}, {"X": 590, "Y": 165}, {"X": 540, "Y": 165}],
+      "TextPosition": {"X": 565, "Y": 140},
+      "KeyCodes": [76],
+      "Text": "L",
+      "ShiftText": "L",
+      "ChangeOnCaps": true
+    },
+    {
+      "Id": 50,
+      "Boundaries": [{"X": 595, "Y": 115}, {"X": 645, "Y": 115}, {"X": 645, "Y": 165}, {"X": 595, "Y": 165}],
+      "TextPosition": {"X": 620, "Y": 140},
+      "KeyCodes": [186],
+      "Text": ";",
+      "ShiftText": ":",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 51,
+      "Boundaries": [{"X": 650, "Y": 115}, {"X": 700, "Y": 115}, {"X": 700, "Y": 165}, {"X": 650, "Y": 165}],
+      "TextPosition": {"X": 675, "Y": 140},
+      "KeyCodes": [222],
+      "Text": "'",
+      "ShiftText": "\"",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 52,
+      "Boundaries": [{"X": 705, "Y": 115}, {"X": 855, "Y": 115}, {"X": 855, "Y": 165}, {"X": 705, "Y": 165}],
+      "TextPosition": {"X": 780, "Y": 140},
+      "KeyCodes": [13],
+      "Text": "Enter",
+      "ShiftText": "Enter",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 60,
+      "Boundaries": [{"X": 5, "Y": 170}, {"X": 120, "Y": 170}, {"X": 120, "Y": 220}, {"X": 5, "Y": 220}],
+      "TextPosition": {"X": 62, "Y": 195},
+      "KeyCodes": [160],
+      "Text": "Shift",
+      "ShiftText": "Shift",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 61,
+      "Boundaries": [{"X": 125, "Y": 170}, {"X": 175, "Y": 170}, {"X": 175, "Y": 220}, {"X": 125, "Y": 220}],
+      "TextPosition": {"X": 150, "Y": 195},
+      "KeyCodes": [90],
+      "Text": "Z",
+      "ShiftText": "Z",
+      "ChangeOnCaps": true
+    },
+    {
+      "Id": 62,
+      "Boundaries": [{"X": 180, "Y": 170}, {"X": 230, "Y": 170}, {"X": 230, "Y": 220}, {"X": 180, "Y": 220}],
+      "TextPosition": {"X": 205, "Y": 195},
+      "KeyCodes": [88],
+      "Text": "X",
+      "ShiftText": "X",
+      "ChangeOnCaps": true
+    },
+    {
+      "Id": 63,
+      "Boundaries": [{"X": 235, "Y": 170}, {"X": 285, "Y": 170}, {"X": 285, "Y": 220}, {"X": 235, "Y": 220}],
+      "TextPosition": {"X": 260, "Y": 195},
+      "KeyCodes": [67],
+      "Text": "C",
+      "ShiftText": "C",
+      "ChangeOnCaps": true
+    },
+    {
+      "Id": 64,
+      "Boundaries": [{"X": 290, "Y": 170}, {"X": 340, "Y": 170}, {"X": 340, "Y": 220}, {"X": 290, "Y": 220}],
+      "TextPosition": {"X": 315, "Y": 195},
+      "KeyCodes": [86],
+      "Text": "V",
+      "ShiftText": "V",
+      "ChangeOnCaps": true
+    },
+    {
+      "Id": 65,
+      "Boundaries": [{"X": 345, "Y": 170}, {"X": 395, "Y": 170}, {"X": 395, "Y": 220}, {"X": 345, "Y": 220}],
+      "TextPosition": {"X": 370, "Y": 195},
+      "KeyCodes": [66],
+      "Text": "B",
+      "ShiftText": "B",
+      "ChangeOnCaps": true
+    },
+    {
+      "Id": 66,
+      "Boundaries": [{"X": 400, "Y": 170}, {"X": 450, "Y": 170}, {"X": 450, "Y": 220}, {"X": 400, "Y": 220}],
+      "TextPosition": {"X": 425, "Y": 195},
+      "KeyCodes": [78],
+      "Text": "N",
+      "ShiftText": "N",
+      "ChangeOnCaps": true
+    },
+    {
+      "Id": 67,
+      "Boundaries": [{"X": 455, "Y": 170}, {"X": 505, "Y": 170}, {"X": 505, "Y": 220}, {"X": 455, "Y": 220}],
+      "TextPosition": {"X": 480, "Y": 195},
+      "KeyCodes": [77],
+      "Text": "M",
+      "ShiftText": "M",
+      "ChangeOnCaps": true
+    },
+    {
+      "Id": 68,
+      "Boundaries": [{"X": 510, "Y": 170}, {"X": 560, "Y": 170}, {"X": 560, "Y": 220}, {"X": 510, "Y": 220}],
+      "TextPosition": {"X": 535, "Y": 195},
+      "KeyCodes": [188],
+      "Text": ",",
+      "ShiftText": "<",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 69,
+      "Boundaries": [{"X": 565, "Y": 170}, {"X": 615, "Y": 170}, {"X": 615, "Y": 220}, {"X": 565, "Y": 220}],
+      "TextPosition": {"X": 590, "Y": 195},
+      "KeyCodes": [190],
+      "Text": ".",
+      "ShiftText": ">",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 70,
+      "Boundaries": [{"X": 620, "Y": 170}, {"X": 670, "Y": 170}, {"X": 670, "Y": 220}, {"X": 620, "Y": 220}],
+      "TextPosition": {"X": 645, "Y": 195},
+      "KeyCodes": [191],
+      "Text": "/",
+      "ShiftText": "?",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 71,
+      "Boundaries": [{"X": 675, "Y": 170}, {"X": 855, "Y": 170}, {"X": 855, "Y": 220}, {"X": 675, "Y": 220}],
+      "TextPosition": {"X": 765, "Y": 195},
+      "KeyCodes": [161],
+      "Text": "Shift",
+      "ShiftText": "Shift",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 80,
+      "Boundaries": [{"X": 5, "Y": 225}, {"X": 75, "Y": 225}, {"X": 75, "Y": 295}, {"X": 5, "Y": 295}],
+      "TextPosition": {"X": 40, "Y": 260},
+      "KeyCodes": [162],
+      "Text": "Ctrl",
+      "ShiftText": "Ctrl",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 81,
+      "Boundaries": [{"X": 80, "Y": 225}, {"X": 150, "Y": 225}, {"X": 150, "Y": 295}, {"X": 80, "Y": 295}],
+      "TextPosition": {"X": 115, "Y": 260},
+      "KeyCodes": [91],
+      "Text": "Win",
+      "ShiftText": "Win",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 82,
+      "Boundaries": [{"X": 155, "Y": 225}, {"X": 225, "Y": 225}, {"X": 225, "Y": 295}, {"X": 155, "Y": 295}],
+      "TextPosition": {"X": 190, "Y": 260},
+      "KeyCodes": [164],
+      "Text": "Alt",
+      "ShiftText": "Alt",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 83,
+      "Boundaries": [{"X": 230, "Y": 225}, {"X": 620, "Y": 225}, {"X": 620, "Y": 295}, {"X": 230, "Y": 295}],
+      "TextPosition": {"X": 425, "Y": 260},
+      "KeyCodes": [32],
+      "Text": "",
+      "ShiftText": "",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 84,
+      "Boundaries": [{"X": 625, "Y": 225}, {"X": 695, "Y": 225}, {"X": 695, "Y": 295}, {"X": 625, "Y": 295}],
+      "TextPosition": {"X": 660, "Y": 260},
+      "KeyCodes": [165],
+      "Text": "Alt",
+      "ShiftText": "Alt",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 85,
+      "Boundaries": [{"X": 700, "Y": 225}, {"X": 770, "Y": 225}, {"X": 770, "Y": 295}, {"X": 700, "Y": 295}],
+      "TextPosition": {"X": 735, "Y": 260},
+      "KeyCodes": [93],
+      "Text": "Menu",
+      "ShiftText": "Menu",
+      "ChangeOnCaps": false
+    },
+    {
+      "Id": 86,
+      "Boundaries": [{"X": 775, "Y": 225}, {"X": 855, "Y": 225}, {"X": 855, "Y": 295}, {"X": 775, "Y": 295}],
+      "TextPosition": {"X": 815, "Y": 260},
+      "KeyCodes": [163],
+      "Text": "Ctrl",
+      "ShiftText": "Ctrl",
+      "ChangeOnCaps": false
+    }
+  ]
+}

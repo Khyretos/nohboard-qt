@@ -1,0 +1,2035 @@
+{
+    "BackgroundColor": {
+        "Blue": 0,
+        "Green": 255,
+        "Red": 0
+    },
+    "BackgroundImageFileName": "",
+    "DefaultKeyStyle": {
+        "Loose": {
+            "Background": {
+                "Blue": 255,
+                "Green": 255,
+                "Red": 255
+            },
+            "BackgroundImageFileName": "",
+            "Font": {
+                "FontFamily": "Open Sans",
+                "Size": 36,
+                "Style": 3
+            },
+            "Outline": {
+                "Blue": 0,
+                "Green": 255,
+                "Red": 0
+            },
+            "OutlineWidth": 1,
+            "ShowOutline": true,
+            "Text": {
+                "Blue": 0,
+                "Green": 0,
+                "Red": 0
+            }
+        },
+        "Pressed": {
+            "Background": {
+                "Blue": 192,
+                "Green": 192,
+                "Red": 192
+            },
+            "BackgroundImageFileName": "",
+            "Font": {
+                "FontFamily": "Open Sans",
+                "Size": 27,
+                "Style": 3
+            },
+            "Outline": {
+                "Blue": 0,
+                "Green": 255,
+                "Red": 0
+            },
+            "OutlineWidth": 1,
+            "ShowOutline": true,
+            "Text": {
+                "Blue": 255,
+                "Green": 255,
+                "Red": 255
+            }
+        }
+    },
+    "DefaultMouseSpeedIndicatorStyle": {
+        "InnerColor": {
+            "Blue": 0,
+            "Green": 0,
+            "Red": 255
+        },
+        "OuterColor": {
+            "Blue": 255,
+            "Green": 0,
+            "Red": 0
+        },
+        "OutlineWidth": 1
+    },
+    "ElementStyles": [
+        {
+            "Key": 1,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    },
+                    "BackgroundImageFileName": "tab_1.png",
+                    "Font": {
+                        "FontFamily": "Open Sans SemiBold",
+                        "Size": 9.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    },
+                    "BackgroundImageFileName": "tab_2.png",
+                    "Font": {
+                        "FontFamily": "Courier New",
+                        "Size": 10,
+                        "Style": 0
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 2,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    },
+                    "BackgroundImageFileName": "enter_1.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 92,
+                        "Green": 11,
+                        "Red": 74
+                    },
+                    "BackgroundImageFileName": "enter_2.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 3,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    },
+                    "BackgroundImageFileName": "caps_1.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 92,
+                        "Green": 11,
+                        "Red": 74
+                    },
+                    "BackgroundImageFileName": "caps_2.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 4,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 92,
+                        "Green": 11,
+                        "Red": 74
+                    },
+                    "BackgroundImageFileName": "space_2.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    },
+                    "BackgroundImageFileName": "space_1.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 92,
+                        "Green": 11,
+                        "Red": 74
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 5,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    },
+                    "BackgroundImageFileName": "left_click_1.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 92,
+                        "Green": 11,
+                        "Red": 74
+                    },
+                    "BackgroundImageFileName": "left_click_2.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 6,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    },
+                    "BackgroundImageFileName": "right_click_1.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 92,
+                        "Green": 11,
+                        "Red": 74
+                    },
+                    "BackgroundImageFileName": "right_click_2.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 25,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 92,
+                        "Green": 11,
+                        "Red": 74
+                    },
+                    "BackgroundImageFileName": "",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 100,
+                        "Green": 100,
+                        "Red": 100
+                    },
+                    "BackgroundImageFileName": "",
+                    "Font": {
+                        "FontFamily": "Arial",
+                        "Size": 10,
+                        "Style": 0
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 27,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 92,
+                        "Green": 11,
+                        "Red": 74
+                    },
+                    "BackgroundImageFileName": "",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 100,
+                        "Green": 100,
+                        "Red": 100
+                    },
+                    "BackgroundImageFileName": "",
+                    "Font": {
+                        "FontFamily": "Arial",
+                        "Size": 10,
+                        "Style": 0
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 28,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 92,
+                        "Green": 11,
+                        "Red": 74
+                    },
+                    "BackgroundImageFileName": "",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 100,
+                        "Green": 100,
+                        "Red": 100
+                    },
+                    "BackgroundImageFileName": "",
+                    "Font": {
+                        "FontFamily": "Arial",
+                        "Size": 10,
+                        "Style": 0
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 38,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 92,
+                        "Green": 11,
+                        "Red": 74
+                    },
+                    "BackgroundImageFileName": "",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 100,
+                        "Green": 100,
+                        "Red": 100
+                    },
+                    "BackgroundImageFileName": "",
+                    "Font": {
+                        "FontFamily": "Arial",
+                        "Size": 10,
+                        "Style": 0
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 43,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 170
+                    },
+                    "BackgroundImageFileName": "",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 36,
+                        "Style": 3
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 192,
+                        "Green": 192,
+                        "Red": 192
+                    },
+                    "BackgroundImageFileName": "",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27,
+                        "Style": 3
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 44,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    },
+                    "BackgroundImageFileName": "windows_1.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 92,
+                        "Green": 11,
+                        "Red": 74
+                    },
+                    "BackgroundImageFileName": "windows_2.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 46,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    },
+                    "BackgroundImageFileName": "menu_1.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 92,
+                        "Green": 11,
+                        "Red": 74
+                    },
+                    "BackgroundImageFileName": "menu_2.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 47,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    },
+                    "BackgroundImageFileName": "shift_1.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 92,
+                        "Green": 11,
+                        "Red": 74
+                    },
+                    "BackgroundImageFileName": "shift_2.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 48,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    },
+                    "BackgroundImageFileName": "shift_1.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 92,
+                        "Green": 11,
+                        "Red": 74
+                    },
+                    "BackgroundImageFileName": "shift_2.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 49,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    },
+                    "BackgroundImageFileName": "ctrl_1.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 92,
+                        "Green": 11,
+                        "Red": 74
+                    },
+                    "BackgroundImageFileName": "ctrl_2.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 50,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    },
+                    "BackgroundImageFileName": "ctrl_1.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 92,
+                        "Green": 11,
+                        "Red": 74
+                    },
+                    "BackgroundImageFileName": "ctrl_2.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 51,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    },
+                    "BackgroundImageFileName": "alt_1.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 92,
+                        "Green": 11,
+                        "Red": 74
+                    },
+                    "BackgroundImageFileName": "alt_2.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 52,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    },
+                    "BackgroundImageFileName": "alt_1.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 92,
+                        "Green": 11,
+                        "Red": 74
+                    },
+                    "BackgroundImageFileName": "alt_2.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 65,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    },
+                    "BackgroundImageFileName": "kireita_2.png",
+                    "Font": {
+                        "FontFamily": "Open Sans SemiBold",
+                        "Size": 9.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    },
+                    "BackgroundImageFileName": "kireita_1.png",
+                    "Font": {
+                        "FontFamily": "Courier New",
+                        "Size": 10,
+                        "Style": 0
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 66,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    },
+                    "BackgroundImageFileName": "backspace_1.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 192,
+                        "Green": 192,
+                        "Red": 192
+                    },
+                    "BackgroundImageFileName": "",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 67,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    },
+                    "BackgroundImageFileName": "",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 92,
+                        "Green": 11,
+                        "Red": 74
+                    },
+                    "BackgroundImageFileName": "",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 68,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    },
+                    "BackgroundImageFileName": "",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 92,
+                        "Green": 11,
+                        "Red": 74
+                    },
+                    "BackgroundImageFileName": "",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 70,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 170
+                    },
+                    "BackgroundImageFileName": "",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 16,
+                        "Style": 3
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 192,
+                        "Green": 192,
+                        "Red": 192
+                    },
+                    "BackgroundImageFileName": "",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27,
+                        "Style": 3
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 73,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    },
+                    "BackgroundImageFileName": "",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 12,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 92,
+                        "Green": 11,
+                        "Red": 74
+                    },
+                    "BackgroundImageFileName": "",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 74,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    },
+                    "BackgroundImageFileName": "",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 12,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 92,
+                        "Green": 11,
+                        "Red": 74
+                    },
+                    "BackgroundImageFileName": "",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 75,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    },
+                    "BackgroundImageFileName": "",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 92,
+                        "Green": 11,
+                        "Red": 74
+                    },
+                    "BackgroundImageFileName": "",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 76,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 92,
+                        "Green": 11,
+                        "Red": 74
+                    },
+                    "BackgroundImageFileName": "left_2.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    },
+                    "BackgroundImageFileName": "left_1.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 77,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 92,
+                        "Green": 11,
+                        "Red": 74
+                    },
+                    "BackgroundImageFileName": "down_2.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    },
+                    "BackgroundImageFileName": "down_1.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 78,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 92,
+                        "Green": 11,
+                        "Red": 74
+                    },
+                    "BackgroundImageFileName": "right_2.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 100,
+                        "Green": 100,
+                        "Red": 100
+                    },
+                    "BackgroundImageFileName": "",
+                    "Font": {
+                        "FontFamily": "Arial",
+                        "Size": 10,
+                        "Style": 0
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 79,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 92,
+                        "Green": 11,
+                        "Red": 74
+                    },
+                    "BackgroundImageFileName": "up_2.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    },
+                    "BackgroundImageFileName": "up_1.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 80,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    },
+                    "BackgroundImageFileName": "led_1.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 92,
+                        "Green": 11,
+                        "Red": 74
+                    },
+                    "BackgroundImageFileName": "led_2.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 81,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    },
+                    "BackgroundImageFileName": "delete_1.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 100,
+                        "Green": 100,
+                        "Red": 100
+                    },
+                    "BackgroundImageFileName": "",
+                    "Font": {
+                        "FontFamily": "Arial",
+                        "Size": 10,
+                        "Style": 0
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 82,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 255,
+                        "Green": 0,
+                        "Red": 0
+                    },
+                    "BackgroundImageFileName": "page_down_1.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 192,
+                        "Green": 192,
+                        "Red": 192
+                    },
+                    "BackgroundImageFileName": "page_down_2.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        },
+        {
+            "Key": 83,
+            "Value": {
+                "Loose": {
+                    "Background": {
+                        "Blue": 0,
+                        "Green": 0,
+                        "Red": 0
+                    },
+                    "BackgroundImageFileName": "page_up_1.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "Pressed": {
+                    "Background": {
+                        "Blue": 192,
+                        "Green": 192,
+                        "Red": 192
+                    },
+                    "BackgroundImageFileName": "page_up_2.png",
+                    "Font": {
+                        "FontFamily": "Open Sans",
+                        "Size": 27.75,
+                        "Style": 1
+                    },
+                    "Outline": {
+                        "Blue": 0,
+                        "Green": 255,
+                        "Red": 0
+                    },
+                    "OutlineWidth": 1,
+                    "ShowOutline": true,
+                    "Text": {
+                        "Blue": 255,
+                        "Green": 255,
+                        "Red": 255
+                    }
+                },
+                "__type": "KeyStyle"
+            }
+        }
+    ]
+}

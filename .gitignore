@@ -1,0 +1,76 @@
+# Build directories
+build*/
+build-*/
+*/build/
+build/
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+CMakeUserPresets.json
+*.cmake
+!cmake/WinDeployQt.cmake
+
+# Qt generated files
+*_autogen/
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
+*.moc
+
+# Compiled objects
+*.o
+*.obj
+*.exe
+*.exe.*
+*.dll
+*.lib
+*.a
+*.so
+*.dylib
+*.app
+*.dmg
+
+# Distribution artifacts
+dist/
+*.AppImage
+*.dmg
+*.exe
+
+# IDE
+.idea/
+.vscode/
+*.pro.user
+*.pro.user.*
+*.creator.user
+*.creator
+*.files
+*.includes
+*.config
+*.kdev4
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.cache
+
+# Test artifacts
+Testing/
+*.test
+
+# Python cache (if any scripts)
+__pycache__/
+*.pyc
+
+# MXE specific (if you ever build inside the project)
+mxe/

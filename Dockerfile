@@ -1,0 +1,101 @@
+# Use the pre-built Qt6 Linux GCC image from stateoftheartio
+FROM stateoftheartio/qt6:6.5-gcc-aqt
+
+# Switch to root to install system dependencies
+USER root
+
+# Install additional system dependencies required by NohBoard, including wget, patchelf, and file
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    wget \
+    patchelf \
+    file \
+    libx11-dev \
+    libxtst-dev \
+    libxkbcommon-x11-dev \
+    libxcb-*-dev \
+    libx11-xcb-dev \
+    libxcb-keysyms1-dev \
+    libxcb-image0-dev \
+    libxcb-shm0-dev \
+    libxcb-icccm4-dev \
+    libxcb-sync-dev \
+    libxcb-xfixes0-dev \
+    libxcb-shape0-dev \
+    libxcb-randr0-dev \
+    libxcb-render-util0-dev \
+    libxcb-xinerama0-dev \
+    libxcb-xinput-dev \
+    libxcb-xkb-dev \
+    libxkbcommon-dev \
+    libglib2.0-dev \
+    libpcre2-dev \
+    libdouble-conversion-dev \
+    libicu-dev \
+    libssl-dev \
+    zlib1g-dev \
+    libfreetype6-dev \
+    libfontconfig1-dev \
+    libdbus-1-dev \
+    libinput-dev \
+    libudev-dev \
+    libgl1-mesa-dev \
+    libglu1-mesa-dev \
+    libopengl-dev \
+    && apt-get clean
+
+# Set working directory
+WORKDIR /app
+
+# Copy desktop file and icon first
+COPY nohboard.desktop /app/
+COPY nohboard.png /app/
+
+# Copy the rest of the project
+COPY . /app
+
+# Patch inputhook_wayland.cpp for older libinput (Ubuntu 20.04)
+RUN sed -i 's/LIBINPUT_EVENT_POINTER_SCROLL_WHEEL/LIBINPUT_EVENT_POINTER_AXIS/g' src/input/inputhook_wayland.cpp && \
+    sed -i 's/libinput_event_pointer_get_scroll_value/libinput_event_pointer_get_axis_value/g' src/input/inputhook_wayland.cpp
+
+# Build the application
+RUN rm -rf build && mkdir build && cd build && \
+    cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr && \
+    make -j$(nproc)
+
+# Install to AppDir
+RUN cd build && \
+    make install DESTDIR=AppDir
+
+# Prepare AppDir with desktop file and icon
+RUN cd build && \
+    mkdir -p AppDir/usr/share/applications AppDir/usr/share/icons/hicolor/256x256/apps && \
+    cp /app/nohboard.desktop AppDir/usr/share/applications/ && \
+    cp /app/nohboard.png AppDir/usr/share/icons/hicolor/256x256/apps/
+
+# Manually copy ALL Qt libraries (including ICU and other dependencies) into AppDir
+RUN QT_LIB_DIR=/opt/Qt/6.5.0/gcc_64/lib && \
+    mkdir -p build/AppDir/usr/lib build/AppDir/usr/plugins && \
+    cp -d ${QT_LIB_DIR}/*.so* build/AppDir/usr/lib/ && \
+    cp -r /opt/Qt/6.5.0/gcc_64/plugins build/AppDir/usr/
+
+# Set rpath for the binary to find libraries in AppDir
+RUN patchelf --set-rpath '$ORIGIN/../lib' build/AppDir/usr/bin/NohBoard
+
+# Install appimagetool by extracting the linuxdeploy-plugin-appimage
+RUN wget -q https://github.com/linuxdeploy/linuxdeploy-plugin-appimage/releases/download/continuous/linuxdeploy-plugin-appimage-x86_64.AppImage -O /tmp/plugin.AppImage && \
+    chmod +x /tmp/plugin.AppImage && \
+    cd /tmp && \
+    ./plugin.AppImage --appimage-extract && \
+    mv squashfs-root /opt/appimagetool && \
+    ln -s /opt/appimagetool/AppRun /usr/local/bin/appimagetool && \
+    rm /tmp/plugin.AppImage
+
+# Run linuxdeploy to deploy remaining system dependencies (without output plugin)
+RUN cd build && \
+    linuxdeploy --appdir AppDir
+
+# Generate the AppImage using appimagetool (using --appdir flag)
+RUN cd build && \
+    appimagetool --appdir=AppDir
+
+# The resulting AppImage will be in /app/build/

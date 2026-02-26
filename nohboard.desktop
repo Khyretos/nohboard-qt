@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=NohBoard
+Comment=Keyboard Visualizer
+Exec=NohBoard
+Icon=nohboard
+Terminal=false
+Type=Application
+Categories=Utility;

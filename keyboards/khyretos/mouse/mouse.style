@@ -1,0 +1,193 @@
+{
+  "BackgroundColor": {
+    "Blue": 0,
+    "Green": 255,
+    "Red": 0
+  },
+  "BackgroundImageFileName": null,
+  "DefaultKeyStyle": {
+    "Loose": {
+      "Background": {
+        "Blue": 255,
+        "Green": 255,
+        "Red": 255
+      },
+      "BackgroundImageFileName": "",
+      "Font": {
+        "DownloadUrl": null,
+        "FontFamily": "Open Sans",
+        "Size": 12,
+        "Style": 1
+      },
+      "Outline": {
+        "Blue": 0,
+        "Green": 255,
+        "Red": 0
+      },
+      "OutlineWidth": 2,
+      "ShowOutline": true,
+      "Text": {
+        "Blue": 0,
+        "Green": 0,
+        "Red": 0
+      }
+    },
+    "Pressed": {
+      "Background": {
+        "Blue": 0,
+        "Green": 192,
+        "Red": 192
+      },
+      "BackgroundImageFileName": "",
+      "Font": {
+        "DownloadUrl": null,
+        "FontFamily": "Open Sans",
+        "Size": 27.75,
+        "Style": 1
+      },
+      "Outline": {
+        "Blue": 0,
+        "Green": 255,
+        "Red": 0
+      },
+      "OutlineWidth": 1,
+      "ShowOutline": true,
+      "Text": {
+        "Blue": 255,
+        "Green": 255,
+        "Red": 255
+      }
+    }
+  },
+  "DefaultMouseSpeedIndicatorStyle": {
+    "InnerColor": {
+      "Blue": 92,
+      "Green": 11,
+      "Red": 74
+    },
+    "OuterColor": {
+      "Blue": 255,
+      "Green": 255,
+      "Red": 255
+    },
+    "OutlineWidth": 1
+  },
+  "ElementStyles": [
+    {
+      "Key": 8,
+      "Value": {
+        "__type": "KeyStyle",
+        "Loose": {
+          "Background": {
+            "Blue": 0,
+            "Green": 0,
+            "Red": 0
+          },
+          "BackgroundImageFileName": "",
+          "Font": {
+            "DownloadUrl": null,
+            "FontFamily": "Open Sans",
+            "Size": 9.75,
+            "Style": 1
+          },
+          "Outline": {
+            "Blue": 0,
+            "Green": 255,
+            "Red": 0
+          },
+          "OutlineWidth": 1,
+          "ShowOutline": true,
+          "Text": {
+            "Blue": 0,
+            "Green": 255,
+            "Red": 255
+          }
+        },
+        "Pressed": {
+          "Background": {
+            "Blue": 0,
+            "Green": 0,
+            "Red": 255
+          },
+          "BackgroundImageFileName": "",
+          "Font": {
+            "DownloadUrl": null,
+            "FontFamily": "Open Sans",
+            "Size": 10,
+            "Style": 0
+          },
+          "Outline": {
+            "Blue": 255,
+            "Green": 0,
+            "Red": 0
+          },
+          "OutlineWidth": 1,
+          "ShowOutline": true,
+          "Text": {
+            "Blue": 0,
+            "Green": 0,
+            "Red": 255
+          }
+        }
+      }
+    },
+    {
+      "Key": 7,
+      "Value": {
+        "__type": "KeyStyle",
+        "Loose": {
+          "Background": {
+            "Blue": 255,
+            "Green": 0,
+            "Red": 255
+          },
+          "BackgroundImageFileName": "",
+          "Font": {
+            "DownloadUrl": null,
+            "FontFamily": "Open Sans",
+            "Size": 9.75,
+            "Style": 1
+          },
+          "Outline": {
+            "Blue": 0,
+            "Green": 255,
+            "Red": 0
+          },
+          "OutlineWidth": 1,
+          "ShowOutline": true,
+          "Text": {
+            "Blue": 0,
+            "Green": 255,
+            "Red": 255
+          }
+        },
+        "Pressed": {
+          "Background": {
+            "Blue": 92,
+            "Green": 11,
+            "Red": 74
+          },
+          "BackgroundImageFileName": "",
+          "Font": {
+            "DownloadUrl": null,
+            "FontFamily": "Open Sans",
+            "Size": 10,
+            "Style": 1
+          },
+          "Outline": {
+            "Blue": 0,
+            "Green": 255,
+            "Red": 0
+          },
+          "OutlineWidth": 1,
+          "ShowOutline": true,
+          "Text": {
+            "Blue": 0,
+            "Green": 0,
+            "Red": 0
+          }
+        }
+      }
+    }
+  ]
+}
