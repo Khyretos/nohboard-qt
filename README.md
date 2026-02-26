@@ -4,6 +4,8 @@ As a software developer with limited C++ expertise, I directed the development o
 
 # NohBoard Qt – Cross‑Platform Keyboard Visualizer
 
+![alt text](./nohboard.png)
+
 NohBoard Qt is a modern rewrite of the original [NohBoard](https://github.com/ThoNohT/NohBoard) keyboard visualizer. It displays your keystrokes, mouse clicks, and mouse movements in a customizable on‑screen overlay.  
 Built with **Qt6** and **C++17**, it runs on **Linux** (X11/Wayland), **Windows**, and **macOS**.
 
@@ -17,6 +19,12 @@ Built with **Qt6** and **C++17**, it runs on **Linux** (X11/Wayland), **Windows*
 - **Cross‑platform** – works on Linux (AppImage), Windows (standalone .exe), and macOS (universal .app).
 
 ---
+
+## Screenshots
+
+![alt text](./images/image-3.png)
+![alt text](./images/image-2.png)
+![alt text](./images/image-4.png)
 
 ## Project Structure
 
