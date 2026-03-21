@@ -69,7 +69,7 @@ Built with **Qt6** and **C++17**, it runs on **Linux** (X11/Wayland), **Windows*
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourname/nohboard-qt.git
+git clone https://github.com/Khyretos/nohboard-qt.git
 cd nohboard-qt
 ```
 
