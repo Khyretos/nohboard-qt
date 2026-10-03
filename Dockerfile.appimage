@@ -1,5 +1,5 @@
 # Use the pre-built Qt6 Linux GCC image from stateoftheartio
-FROM stateoftheartio/qt6:6.5-gcc-aqt
+FROM stateoftheartio/qt6:6.10-gcc-aqt
 
 # Switch to root to install system dependencies
 USER root
