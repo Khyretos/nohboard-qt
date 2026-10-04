@@ -73,10 +73,14 @@ RUN cd build && \
     cp /app/nohboard.png AppDir/usr/share/icons/hicolor/256x256/apps/
 
 # Manually copy ALL Qt libraries (including ICU and other dependencies) into AppDir
-RUN QT_LIB_DIR=/opt/Qt/6.5.0/gcc_64/lib && \
+# from the Qt version the base image ships (QT_GCC). The SQL drivers are left
+# out: they are unused and newer Qt ships Oracle/ODBC ones whose client
+# libraries aren't installed, which makes linuxdeploy fail.
+RUN QT_LIB_DIR=$QT_GCC/lib && \
     mkdir -p build/AppDir/usr/lib build/AppDir/usr/plugins && \
     cp -d ${QT_LIB_DIR}/*.so* build/AppDir/usr/lib/ && \
-    cp -r /opt/Qt/6.5.0/gcc_64/plugins build/AppDir/usr/
+    cp -r $QT_GCC/plugins build/AppDir/usr/ && \
+    rm -rf build/AppDir/usr/plugins/sqldrivers
 
 # Set rpath for the binary to find libraries in AppDir
 RUN patchelf --set-rpath '$ORIGIN/../lib' build/AppDir/usr/bin/NohBoard
@@ -87,7 +91,7 @@ RUN wget -q https://github.com/linuxdeploy/linuxdeploy-plugin-appimage/releases/
     cd /tmp && \
     ./plugin.AppImage --appimage-extract && \
     mv squashfs-root /opt/appimagetool && \
-    ln -s /opt/appimagetool/AppRun /usr/local/bin/appimagetool && \
+    ln -sf /opt/appimagetool/AppRun /usr/local/bin/appimagetool && \
     rm /tmp/plugin.AppImage
 
 # Run linuxdeploy to deploy remaining system dependencies (without output plugin)
