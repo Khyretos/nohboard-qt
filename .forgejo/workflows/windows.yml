@@ -44,7 +44,7 @@ jobs:
 
       - name: Check for unresolved DLLs
         run: |
-          & $env:MSYS2_BASH -lc 'PATH=/c/Windows/System32 /ucrt64/bin/ntldd -R dist/bin/NohBoard.exe | grep not.found | grep -v -e HvsiFileTrust -e api-ms- -e ext-ms-; test $? -ne 0'
+          & $env:MSYS2_BASH -lc 'cp /ucrt64/bin/ntldd.exe build/ && PATH=/c/Windows/System32 build/ntldd.exe -R dist/bin/NohBoard.exe > build/ntldd.txt || exit 1; if grep -F not\ found build/ntldd.txt | grep -v -e HvsiFileTrust -e api-ms- -e ext-ms-; then exit 1; fi'
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
       - name: Clean-PATH launch check
