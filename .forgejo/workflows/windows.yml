@@ -24,7 +24,7 @@ jobs:
 
       - name: Install build packages
         run: |
-          & $env:MSYS2_BASH -lc 'pacman -S --needed --noconfirm mingw-w64-ucrt-x86_64-qt6-static mingw-w64-ucrt-x86_64-libwebp mingw-w64-ucrt-x86_64-cmake mingw-w64-ucrt-x86_64-ninja'
+          & $env:MSYS2_BASH -lc 'pacman -S --needed --noconfirm mingw-w64-ucrt-x86_64-qt6-static mingw-w64-ucrt-x86_64-libwebp mingw-w64-ucrt-x86_64-cmake mingw-w64-ucrt-x86_64-ninja mingw-w64-ucrt-x86_64-ntldd'
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
       - name: Configure
