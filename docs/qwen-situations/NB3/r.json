@@ -1,0 +1,32 @@
+[
+ {
+  "name": "nb-r1",
+  "role": "worker/web",
+  "mode": "patch",
+  "out": "/home/khyretos/Docker/Personal-projects/kk-wt-nbwin/nohboard-qt/CMakeLists.txt",
+  "check": "bash /tmp/kk-nbwin-chk/r1.sh",
+  "precheck": false,
+  "context": [],
+  "prompt": "In CMakeLists.txt, inside the `install(CODE [[` block, directly before the line `        set(_exe \"${CMAKE_INSTALL_PREFIX}/bin/NohBoard.exe\")` insert these lines (8-space indent, 12 for the middle one):\n        if(POLICY CMP0207)\n            cmake_policy(SET CMP0207 NEW)\n        endif()\nThis silences the CMP0207 author warning per System32 DLL. Change nothing else. One SEARCH/REPLACE block; the SEARCH is only the `set(_exe` line."
+ },
+ {
+  "name": "nb-r2",
+  "role": "worker/web",
+  "mode": "patch",
+  "out": "/home/khyretos/Docker/Personal-projects/kk-wt-nbwin/nohboard-qt/src/mainwindow.cpp",
+  "check": "bash /tmp/kk-nbwin-chk/r2.sh",
+  "precheck": false,
+  "context": [],
+  "prompt": "In src/mainwindow.cpp, the `if (!m_inputManager->start())` branch only does `qWarning() << \"Failed to start input hook\";`. Under a -mwindows app nobody sees that. Right after that qWarning line, add two lines: `        statusBar()->show();` and `        statusBar()->showMessage(tr(\"Input capture could not start: keys and mouse clicks will not light up.\"));`. Change nothing else. One SEARCH/REPLACE block; the SEARCH is only the qWarning line."
+ },
+ {
+  "name": "nb-r3",
+  "role": "worker/web",
+  "mode": "patch",
+  "out": "/home/khyretos/Docker/Personal-projects/kk-wt-nbwin/nohboard-qt/src/input/inputhook_win.cpp",
+  "check": "bash /tmp/kk-nbwin-chk/r3.sh",
+  "precheck": false,
+  "context": [],
+  "prompt": "In inputhook_win.cpp make the thread id of the hook thread atomic: add `#include <atomic>` after the line `#include <QAtomicInt>` (keep the list sorted-ish), and replace the member line `    DWORD threadId = 0; // stored when thread starts` by `    std::atomic<DWORD> threadId{0}; // stored when thread starts`. Two SEARCH/REPLACE blocks, nothing else changes."
+ }
+]

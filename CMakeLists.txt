@@ -155,6 +155,9 @@ if(WIN32)
     get_filename_component(NB_COMPILER_BIN "${CMAKE_CXX_COMPILER}" DIRECTORY)
     install(CODE "set(NB_COMPILER_BIN \"${NB_COMPILER_BIN}\")")
     install(CODE [[
+        if(POLICY CMP0207)
+            cmake_policy(SET CMP0207 NEW)
+        endif()
         set(_exe "${CMAKE_INSTALL_PREFIX}/bin/NohBoard.exe")
         # built from $<TARGET_FILE:NohBoard>
         file(GET_RUNTIME_DEPENDENCIES EXECUTABLES "${_exe}" RESOLVED_DEPENDENCIES_VAR _resolved UNRESOLVED_DEPENDENCIES_VAR _unresolved DIRECTORIES "${NB_COMPILER_BIN}" PRE_EXCLUDE_REGEXES "api-ms-" "ext-ms-" POST_EXCLUDE_REGEXES ".*[/\\][Ww]indows[/\\][Ss]ystem32[/\\].*")

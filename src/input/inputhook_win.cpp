@@ -3,6 +3,7 @@
 #ifdef Q_OS_WIN
 
 #include <QAtomicInt>
+#include <atomic>
 #include <QDebug>
 #include <QMutex>
 #include <QThread>
@@ -17,7 +18,7 @@ class InputHookWin::Impl {
     std::atomic<bool> running{false};
     std::atomic<bool> shouldStop{false};
     InputHookWin *q = nullptr;
-    DWORD threadId = 0; // stored when thread starts
+    std::atomic<DWORD> threadId{0}; // stored when thread starts
     QMutex readyMutex;
     QWaitCondition readyCond;
     bool hookReady = false;
