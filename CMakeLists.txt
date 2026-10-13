@@ -141,9 +141,6 @@ install(TARGETS NohBoard RUNTIME DESTINATION bin)
 
 # Windows specific settings
 if(WIN32)
-    # Force static linking of Qt (for Windows)
-    set(Qt6_STATIC ON)
-
     # Statically link MinGW runtime and make it a GUI application
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static -static-libgcc -static-libstdc++")
     target_link_options(NohBoard PRIVATE -mwindows)
@@ -153,6 +150,24 @@ if(WIN32)
     )
     # Add icon resource (requires nohboard.ico in project root)
     target_sources(NohBoard PRIVATE resources.rc)
+
+    # Copy every non-system DLL next to the installed exe (MSYS2's static Qt still imports freetype, harfbuzz, png, jpeg, ...)
+    get_filename_component(NB_COMPILER_BIN "${CMAKE_CXX_COMPILER}" DIRECTORY)
+    install(CODE "set(NB_COMPILER_BIN \"${NB_COMPILER_BIN}\")")
+    install(CODE [[
+        if(POLICY CMP0207)
+            cmake_policy(SET CMP0207 NEW)
+        endif()
+        set(_exe "${CMAKE_INSTALL_PREFIX}/bin/NohBoard.exe")
+        # built from $<TARGET_FILE:NohBoard>
+        file(GET_RUNTIME_DEPENDENCIES EXECUTABLES "${_exe}" RESOLVED_DEPENDENCIES_VAR _resolved UNRESOLVED_DEPENDENCIES_VAR _unresolved DIRECTORIES "${NB_COMPILER_BIN}" PRE_EXCLUDE_REGEXES "api-ms-" "ext-ms-" POST_EXCLUDE_REGEXES ".*[/\\][Ww]indows[/\\][Ss]ystem32[/\\].*")
+        foreach(_dll IN LISTS _resolved)
+            file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE SHARED_LIBRARY FILES "${_dll}")
+        endforeach()
+        if(_unresolved)
+            message(FATAL_ERROR "Unresolved DLL dependencies: ${_unresolved}")
+        endif()
+    ]])
 endif()
 
 # Mac specific settings

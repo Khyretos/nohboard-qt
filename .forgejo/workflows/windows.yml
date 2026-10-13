@@ -1,0 +1,69 @@
+name: windows
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows
+    defaults:
+      run:
+        shell: powershell
+    env:
+      PSExecutionPolicyPreference: Bypass
+      MSYSTEM: UCRT64
+      CHERE_INVOKING: "1"
+      MSYS2_BASH: C:\msys64\usr\bin\bash.exe
+    steps:
+      - name: Checkout
+        uses: https://code.forgejo.org/actions/checkout@v4
+
+      - name: Install build packages
+        run: |
+          & $env:MSYS2_BASH -lc 'pacman -S --needed --noconfirm mingw-w64-ucrt-x86_64-qt6-static mingw-w64-ucrt-x86_64-libwebp mingw-w64-ucrt-x86_64-cmake mingw-w64-ucrt-x86_64-ninja mingw-w64-ucrt-x86_64-ntldd'
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Configure
+        run: |
+          & $env:MSYS2_BASH -lc 'cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=/ucrt64/qt6-static'
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Build
+        run: |
+          & $env:MSYS2_BASH -lc 'cmake --build build'
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Install to dist
+        run: |
+          & $env:MSYS2_BASH -lc 'cmake --install build --prefix dist'
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Check for unresolved DLLs
+        run: |
+          & $env:MSYS2_BASH -lc 'PATH=/c/Windows/System32 /ucrt64/bin/ntldd -R dist/bin/NohBoard.exe | grep not.found | grep -v -e HvsiFileTrust -e api-ms- -e ext-ms-; test $? -ne 0'
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Clean-PATH launch check
+        run: |
+          $env:PATH = "C:\Windows\System32"
+          Add-Type -Namespace W32 -Name Err -MemberDefinition '[DllImport("kernel32.dll")] public static extern uint SetErrorMode(uint m);'
+          [void][W32.Err]::SetErrorMode(3)   # no loader/GPF dialogs; inherited by the child
+          $psi = New-Object System.Diagnostics.ProcessStartInfo (Resolve-Path "dist\bin\NohBoard.exe").Path
+          $psi.UseShellExecute = $false
+          $p = [System.Diagnostics.Process]::Start($psi)
+          $deadline = (Get-Date).AddSeconds(15)
+          while (-not $p.HasExited -and (Get-Date) -lt $deadline -and $p.MainWindowTitle -eq '') { Start-Sleep -Milliseconds 500; $p.Refresh() }
+          if ($p.HasExited) { Write-Host ("NohBoard.exe exited early: 0x{0:X8}" -f $p.ExitCode); exit 1 }
+          if ($p.MainWindowTitle -eq '') { Write-Host "no window after 15 s"; Stop-Process -Id $p.Id -Force; exit 1 }
+          Write-Host "NohBoard.exe is up: '$($p.MainWindowTitle)'"
+          Stop-Process -Id $p.Id -Force
+
+      - name: Upload artifact
+        uses: https://code.forgejo.org/forgejo/upload-artifact@v4
+        with:
+          name: NohBoard-windows
+          path: dist/

@@ -1,0 +1,54 @@
+name: windows
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows
+    defaults:
+      run:
+        shell: powershell
+    env:
+      MSYSTEM: UCRT64
+      CHERE_INVOKING: "1"
+      MSYS2_BASH: C:\msys64\usr\bin\bash.exe
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure
+        run: |
+          & $env:MSYS2_BASH -lc 'cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=/ucrt64/qt6-static'
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Build
+        run: |
+          & $env:MSYS2_BASH -lc 'cmake --build build'
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Install to dist
+        run: |
+          & $env:MSYS2_BASH -lc 'cmake --install build --prefix "$PWD/dist"'
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Clean-PATH launch check
+        run: |
+          $env:PATH = "C:\Windows\System32"
+          $p = Start-Process -FilePath "dist\bin\NohBoard.exe" -PassThru
+          Start-Sleep -Seconds 5
+          if ($p.HasExited) {
+            Write-Host "NohBoard.exe exited early with code $($p.ExitCode)"
+            exit 1
+          }
+          Stop-Process -Id $p.Id -Force
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: NohBoard-windows
+          path: dist/

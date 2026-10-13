@@ -1,0 +1,11 @@
+[
+ {
+  "name": "nb-u3",
+  "role": "worker/web",
+  "out": "/home/khyretos/Docker/Personal-projects/kk-wt-nbwin/nohboard-qt/.forgejo/workflows/windows.yml",
+  "check": "bash /tmp/kk-nbwin-chk/u3.sh",
+  "precheck": false,
+  "context": [],
+  "prompt": "Write a Forgejo Actions workflow file `.forgejo/workflows/windows.yml` (YAML, 2-space indent, final newline), name `windows`.\nTriggers: `on:` push to branch main, pull_request, workflow_dispatch.\nOne job `build` with `runs-on: windows` (host mode runner, PowerShell). MSYS2 is installed at `C:\\msys64` and is NOT on PATH: call it by full path. Use `defaults: run: shell: powershell` in the job, and call bash like `& C:\\msys64\\usr\\bin\\bash.exe -lc \"...\"` with `$env:MSYSTEM = \"UCRT64\"` and `$env:CHERE_INVOKING = \"1\"` set in the job `env:`.\nSteps, each its own named step:\n1. `actions/checkout@v4`.\n2. Configure: bash -lc \"cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release\" (MSYS2 UCRT64 Qt 6 static is installed already).\n3. Build: bash -lc \"cmake --build build\".\n4. Install: bash -lc \"cmake --install build --prefix \\\"$PWD/dist\\\"\" so the exe and its DLLs land in dist/bin.\n5. Clean-PATH launch check (PowerShell): `$env:PATH = \"C:\\Windows\\System32\"`; `$p = Start-Process -FilePath \"dist\\bin\\NohBoard.exe\" -PassThru`; `Start-Sleep -Seconds 5`; if `$p.HasExited` then print the exit code and `exit 1`; otherwise `Stop-Process -Id $p.Id -Force`. The word System32 must appear exactly like that.\n6. Upload artifact: `actions/upload-artifact@v3` with name NohBoard-windows, path `dist/`.\nNo other steps, no secrets. Keep comments to a minimum."
+ }
+]

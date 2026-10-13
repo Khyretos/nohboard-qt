@@ -3,6 +3,7 @@
 #ifdef Q_OS_WIN
 
 #include <QAtomicInt>
+#include <atomic>
 #include <QDebug>
 #include <QMutex>
 #include <QThread>
@@ -17,7 +18,18 @@ class InputHookWin::Impl {
     std::atomic<bool> running{false};
     std::atomic<bool> shouldStop{false};
     InputHookWin *q = nullptr;
-    DWORD threadId = 0; // stored when thread starts
+    std::atomic<DWORD> threadId{0}; // stored when thread starts
+    QMutex readyMutex;
+    QWaitCondition readyCond;
+    bool hookReady = false;
+    bool hookOk = false;
+
+    void signalReady(bool ok) {
+        QMutexLocker locker(&readyMutex);
+        hookReady = true;
+        hookOk = ok;
+        readyCond.wakeAll();
+    }
 
     POINT lastMousePos = {0, 0};
     bool hasLastMousePos = false;
@@ -129,6 +141,7 @@ class InputHookWin::Impl {
 
         if (!impl->keyboardHook || !impl->mouseHook) {
             qWarning() << "Failed to set Windows hooks";
+            impl->signalReady(false);
             if (impl->keyboardHook) UnhookWindowsHookEx(impl->keyboardHook);
             if (impl->mouseHook) UnhookWindowsHookEx(impl->mouseHook);
             impl->keyboardHook = nullptr;
@@ -137,6 +150,7 @@ class InputHookWin::Impl {
         }
 
         impl->running = true;
+        impl->signalReady(true);
         MSG msg;
         while (!impl->shouldStop && GetMessage(&msg, nullptr, 0, 0)) {
             TranslateMessage(&msg);
@@ -174,11 +188,30 @@ bool InputHookWin::start() {
     impl->shouldStop = false;
     impl->hasLastMousePos = false;
     impl->threadId = 0; // reset
+    { QMutexLocker lock(&impl->readyMutex);
+        impl->hookReady = false;
+        impl->hookOk = false;
+    }
 
     impl->thread = QThread::create([this]() { Impl::threadMain(this); });
     connect(impl->thread, &QThread::finished, impl->thread, &QObject::deleteLater);
     impl->thread->start();
-    return true;
+    QMutexLocker lock(&impl->readyMutex);
+    if (!impl->hookReady)
+        impl->readyCond.wait(&impl->readyMutex, 5000);
+    if (!impl->hookReady || !impl->hookOk) {
+        qWarning() << "InputHookWin::start(): hooks were not installed";
+        lock.unlock();
+        impl->shouldStop = true;
+        if (impl->threadId != 0)
+            PostThreadMessage(impl->threadId, Impl::WM_STOP_HOOK, 0, 0);
+        impl->thread->quit();
+        impl->thread->wait();
+        impl->thread = nullptr;
+        impl->running = false;
+        return false;
+    }
+    return impl->hookOk;
 }
 
 void InputHookWin::stop() {

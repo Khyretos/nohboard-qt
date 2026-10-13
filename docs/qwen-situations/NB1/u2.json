@@ -1,0 +1,44 @@
+[
+ {
+  "name": "nb-u2a",
+  "role": "worker/web",
+  "mode": "patch",
+  "out": "/home/khyretos/Docker/Personal-projects/kk-wt-nbwin/nohboard-qt/src/input/inputhook_win.cpp",
+  "check": "bash /tmp/kk-nbwin-chk/u2a.sh",
+  "prompt": "In inputhook_win.cpp class `InputHookWin::Impl`, directly after the line `    DWORD threadId = 0; // stored when thread starts` add these members: `QMutex readyMutex;`, `QWaitCondition readyCond;`, `bool hookReady = false;`, `bool hookOk = false;` and a method\n`void signalReady(bool ok) {\n    QMutexLocker lock(&readyMutex);\n    hookOk = ok;\n    hookReady = true;\n    readyCond.wakeAll();\n}`. Change nothing else. One SEARCH/REPLACE block.",
+  "context": [],
+  "precheck": false
+ },
+ {
+  "name": "nb-u2b",
+  "role": "worker/web",
+  "mode": "patch",
+  "out": "/home/khyretos/Docker/Personal-projects/kk-wt-nbwin/nohboard-qt/src/input/inputhook_win.cpp",
+  "check": "bash /tmp/kk-nbwin-chk/u2b.sh",
+  "prompt": "In `Impl::threadMain`, inside the failure branch `if (!impl->keyboardHook || !impl->mouseHook) {`, add the line `impl->signalReady(false);` right after the `qWarning() << \"Failed to set Windows hooks\";` line, and before the `return;`. Change nothing else. One SEARCH/REPLACE block; the SEARCH is just the qWarning line.",
+  "context": [],
+  "precheck": false
+ },
+ {
+  "name": "nb-u2c",
+  "role": "worker/web",
+  "mode": "patch",
+  "out": "/home/khyretos/Docker/Personal-projects/kk-wt-nbwin/nohboard-qt/src/input/inputhook_win.cpp",
+  "check": "bash /tmp/kk-nbwin-chk/u2c.sh",
+  "prompt": "In `Impl::threadMain`, directly AFTER the line `        impl->running = true;` (the one followed by `MSG msg;`) insert the line `        impl->signalReady(true);`. Change nothing else. One SEARCH/REPLACE block; the SEARCH is just the `impl->running = true;` line that is in threadMain.",
+  "context": [],
+  "precheck": false
+ },
+ {
+  "name": "nb-u2d",
+  "role": "worker/web",
+  "mode": "patch",
+  "out": "/home/khyretos/Docker/Personal-projects/kk-wt-nbwin/nohboard-qt/src/input/inputhook_win.cpp",
+  "check": "bash /tmp/kk-nbwin-chk/u2d.sh",
+  "prompt": "Rewrite `bool InputHookWin::start()` so it returns the real SetWindowsHookEx result. After `impl->threadId = 0; // reset` add `{ QMutexLocker lock(&impl->readyMutex); impl->hookReady = false; impl->hookOk = false; }`. Keep the QThread::create/connect/`impl->thread->start();` lines. Then replace the final `return true;` by:\n```\n    QMutexLocker lock(&impl->readyMutex);\n    if (!impl->hookReady)\n        impl->readyCond.wait(&impl->readyMutex, 5000);\n    if (!impl->hookReady || !impl->hookOk) {\n        qWarning() << \"InputHookWin::start(): hooks were not installed\";\n        lock.unlock();\n        impl->shouldStop = true;\n        if (impl->threadId != 0)\n            PostThreadMessage(impl->threadId, Impl::WM_STOP_HOOK, 0, 0);\n        impl->thread->quit();\n        impl->thread->wait();\n        impl->thread = nullptr;\n        impl->running = false;\n        return false;\n    }\n    return impl->hookOk;\n```\nThe last line must be exactly `return impl->hookOk;`. Do not change other functions. One SEARCH/REPLACE block for the end of start() and one for the reset line is NOT allowed: use a single block whose SEARCH is the 5 lines from `impl->threadId = 0; // reset` to `return true;` of start().",
+  "context": [
+   "/home/khyretos/Docker/Personal-projects/kk-wt-nbwin/nohboard-qt/src/input/inputhook_win.cpp"
+  ],
+  "precheck": false
+ }
+]

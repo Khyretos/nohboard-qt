@@ -48,9 +48,11 @@ MainWindow::MainWindow(const AppSettings &settings, QWidget *parent)
     show();
 
     qDebug() << "Starting input manager...";
-    if (!m_inputManager->start())
+    if (!m_inputManager->start()) {
         qWarning() << "Failed to start input hook";
-    else {
+        statusBar()->show();
+        statusBar()->showMessage(tr("Input capture could not start: keys and mouse clicks will not light up."));
+    } else {
         qDebug() << "Input manager started";
     }
 
